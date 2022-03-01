@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_pokedex/model/pokemon_model.dart';
@@ -10,7 +12,9 @@ class PokeApi {
     List<PokemonModel> _list = [];
 
     var result = await Dio().get(_url);
-    debugPrint(result.toString());
+    var pokeList = jsonDecode(result.data);
+    debugPrint(pokeList['pokemon'].toString());//içinde bulunan pokemon nesnesine eşitliyoruz
+    
 
     return _list;
   }
