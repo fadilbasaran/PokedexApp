@@ -12,9 +12,13 @@ class PokeApi {
     List<PokemonModel> _list = [];
 
     var result = await Dio().get(_url);
-    var pokeList = jsonDecode(result.data);
-    debugPrint(pokeList['pokemon'].toString());//içinde bulunan pokemon nesnesine eşitliyoruz
-    
+    var pokeList = jsonDecode(result.data)['pokemon'];
+    //debugPrint(pokeList['pokemon'].toString()); //içinde bulunan pokemon nesnesine eşitliyoruz
+
+    if (pokeList is List) {
+      _list = pokeList.map((e) => PokemonModel.fromJson(e)).toList();
+    }
+    debugPrint(_list.first.toString());
 
     return _list;
   }
