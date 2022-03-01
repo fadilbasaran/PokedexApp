@@ -1,7 +1,6 @@
 import 'dart:convert';
 
 import 'package:dio/dio.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter_pokedex/model/pokemon_model.dart';
 
 class PokeApi {
@@ -18,7 +17,11 @@ class PokeApi {
     if (pokeList is List) {
       _list = pokeList.map((e) => PokemonModel.fromJson(e)).toList();
     }
-    debugPrint(_list.first.toString());
+    //debugPrint(_list.first.toString());
+
+    else {
+      return [];
+    }
 
     return _list;
   }

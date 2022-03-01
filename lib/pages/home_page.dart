@@ -1,0 +1,41 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_pokedex/model/pokemon_model.dart';
+import 'package:flutter_pokedex/services/pokdex_api.dart';
+
+class HomePage extends StatefulWidget {
+  const HomePage({Key? key}) : super(key: key);
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  late Future<List<PokemonModel>> _pokemonList;
+  @override
+  void initState() {
+    super.initState();
+    _pokemonList = PokeApi.getPokemonData();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: FutureBuilder<List<PokemonModel>>(
+        future: _pokemonList,
+        builder: (context, snapshot) {
+          if (snapshot.hasData) {
+            List<PokemonModel> _listem = snapshot.data!;
+            
+            return const Center(child: Text('Veri geldi'));
+          } else if (snapshot.hasError) {
+            return const Center(
+              child: Text('Hata Çıktı'),
+            );
+          } else {
+            return const Center(child: CircleAvatar());
+          }
+        },
+      ),
+    );
+  }
+}
