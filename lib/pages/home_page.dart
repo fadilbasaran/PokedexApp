@@ -26,7 +26,12 @@ class _HomePageState extends State<HomePage> {
           if (snapshot.hasData) {
             List<PokemonModel> _listem = snapshot.data!;
             
-            return const Center(child: Text('Veri geldi'));
+            return ListView.builder( itemCount: _listem.length, itemBuilder: (context,index){
+              var oankiPokemon=_listem[index];
+              return ListTile(title: Text(oankiPokemon.name.toString()),);
+            },
+            
+            );
           } else if (snapshot.hasError) {
             return const Center(
               child: Text('Hata Çıktı'),
