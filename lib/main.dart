@@ -16,9 +16,7 @@ class MyApp extends StatelessWidget {
       builder: () => MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Pokedex',
-        theme: ThemeData(
-          primarySwatch: Colors.yellow,
-        ),
+        theme:ThemeData.dark().copyWith(),
         home: const HomePage(),
       ),
     );
