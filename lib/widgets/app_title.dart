@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_pokedex/constants/constants.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AppTitle extends StatefulWidget {
@@ -15,8 +16,14 @@ class _AppTitleState extends State<AppTitle> {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        const Align(alignment: Alignment.topLeft,child:  Text('Pokedex')),
-        Align(alignment: Alignment.topRight,
+        Align(
+            alignment: Alignment.topLeft,
+            child: Text(
+              Constants.title,
+              style: Constants.getTitleTextStyle(),
+            )),
+        Align(
+          alignment: Alignment.topRight,
           child: Image.asset(
             _pokeballImageUrl,
             width: 100.w,
