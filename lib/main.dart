@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_pokedex/pages/home_page.dart';
-
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,14 +11,16 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Pokedex',
-      theme: ThemeData(
-        primarySwatch: Colors.yellow,
+    return ScreenUtilInit(
+      designSize: const Size(412, 732),
+      builder: () => MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'Pokedex',
+        theme: ThemeData(
+          primarySwatch: Colors.yellow,
+        ),
+        home: const HomePage(),
       ),
-      home: const HomePage(),
     );
   }
 }
