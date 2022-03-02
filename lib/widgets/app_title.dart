@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AppTitle extends StatefulWidget {
   const AppTitle({Key? key}) : super(key: key);
@@ -18,8 +19,8 @@ class _AppTitleState extends State<AppTitle> {
         Align(alignment: Alignment.topRight,
           child: Image.asset(
             _pokeballImageUrl,
-            width: 100,
-            height: 100,
+            width: 100.w,
+            height: 100.h,
             fit: BoxFit.fitWidth,
           ),
         ),
