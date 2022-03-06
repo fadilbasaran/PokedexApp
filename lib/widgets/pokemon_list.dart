@@ -34,7 +34,7 @@ late Future<List<PokemonModel>> _pokemonList;
             );
           } else if (snapshot.hasError) {
             return const Center(
-              child: Text('Hata Çıktı'),
+              child: Text('Hata Çıktııı'),
             );
           } else {
             return const Center(child: CircleAvatar());
