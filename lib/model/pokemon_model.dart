@@ -49,7 +49,7 @@ class PokemonModel {
   @override
   String toString() {
     return name!;
-  }//ekrana nasıl yazıdıracağını bilmijyor ondan dolayı ekrana nasıl yazılacağı tanımlıyoruz. 
+  }//Ekrana nasıl yazıdıracağını bilmijyor ondan dolayı ekrana nasıl yazılacağı tanımlıyoruz. 
 
   factory PokemonModel.fromJson(Map<String, dynamic> json) => PokemonModel(
         id: json["id"] == null ? null : json["id"],

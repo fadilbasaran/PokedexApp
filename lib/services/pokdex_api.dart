@@ -10,16 +10,18 @@ class PokeApi {
   static Future<List<PokemonModel>> getPokemonData() async {
     List<PokemonModel> _list = [];
 
-    var result = await Dio().get(_url);
-    var pokeList = jsonDecode(result.data)['pokemon'];
-    //debugPrint(pokeList['pokemon'].toString()); //içinde bulunan pokemon nesnesine eşitliyoruz
+    var result = await Dio().get(_url); //Dio ile verileri getirecek
+    var pokeList = jsonDecode(result.data)[
+        'pokemon']; //Bana bir map verdi ama benim pokemon verileri pkem içinde bir yapıda oluduğ için ordan alınıyor
+    
 
-    if (pokeList is List) {
-      _list = pokeList.map((e) => PokemonModel.fromJson(e)).toList();
+    if (pokeList is List) {//Eğer bir liste ise
+      _list = pokeList.map((e) => PokemonModel.fromJson(e)).toList();//Gelen veriler Pokemon verilerine dönüştürülüyor
+      //ve elimizde bir Pokemon verileri olan bir liste bulunuyor
     }
-    //debugPrint(_list.first.toString());
+    //debugPrint(_list.first.toString());//Listemize verilerin gelip gelmediğini kontrol ediyoruz.
 
-    else {
+    else {//Eğer PokeList bir liste değilse bize bir boş liste döndürsün
       return [];
     }
 
