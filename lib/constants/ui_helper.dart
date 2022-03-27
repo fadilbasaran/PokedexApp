@@ -9,11 +9,19 @@ class UIHelper {
     değils yatay modda ise ekran genişliğinin %15'ni yap*/
   }
 
+  static double getAppIconWidthAndHeigth() {
+    return ScreenUtil().orientation == Orientation.portrait ? 0.20.sh : 0.20.sw;
+    /*Dikey modda ise yüksekliğin %20'si,
+    yatay modda ise genişliğin %20'si olacak şeklide ayarla.*/
+  }
+
   static EdgeInsets getDeafultPadding() {
     if (ScreenUtil().orientation == Orientation.portrait) {
-      return EdgeInsets.all(12.h);//Eğer dikey modda ise ekran yükskeliği üzerinden %12 olarak ayarla.
+      return EdgeInsets.all(12
+          .h); //Eğer dikey modda ise ekran yükskeliği üzerinden %12 olarak ayarla.
     } else {
-      return EdgeInsets.all(8.w);//Eğer yatay modda ise ekran genişliği üzerinden %8 olarak ayarla.
+      return EdgeInsets.all(8
+          .w); //Eğer yatay modda ise ekran genişliği üzerinden %8 olarak ayarla.
     }
   }
 }

@@ -32,10 +32,7 @@ class _AppTitleState extends State<AppTitle> {
             alignment: Alignment.topRight,
             child: Image.asset(
               _pokeballImageUrl,
-              width: ScreenUtil().orientation == Orientation.portrait
-                  ? 0.20.sh
-                  : 0.20.sw,
-              //Dikey modda ise yüksekliğin %20'si,yatay modda ise genişliğin %20'si olacak şeklide ayarla.
+              width: UIHelper.getAppIconWidthAndHeigth(),
               fit: BoxFit.fitWidth,
             ),
           ),
