@@ -13,9 +13,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      designSize: const Size(412, 732),
+      designSize: const Size(412,
+          732), //Emilatörü çözünütlüğüne göre ayarlanıyor. Yeni veya farklı bir emiltörde bu oranlar da olacak
       builder: () => MaterialApp(
-        debugShowCheckedModeBanner: false,//debug görüntüsü gitsin
+        debugShowCheckedModeBanner: false, //debug görüntüsü gitsin
         title: 'Pokedex',
         theme:
             ThemeData.dark().copyWith(textTheme: GoogleFonts.latoTextTheme()),

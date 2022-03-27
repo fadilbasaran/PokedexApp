@@ -32,7 +32,7 @@ class _AppTitleState extends State<AppTitle> {
             child: Image.asset(
               _pokeballImageUrl,
               width: 100.w,
-              height: 100.h,
+              height: 100.h,//Genişlik ve yükselik oranları
               fit: BoxFit.fitWidth,
             ),
           ),
