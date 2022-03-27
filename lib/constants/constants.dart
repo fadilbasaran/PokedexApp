@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class Constants {
   Constants._(); //Kurucu metotunu gizli yapıldı ki kimse nesne türetmesin
@@ -6,16 +7,25 @@ class Constants {
       'Pokedex'; //Biz bunları static tanımladığmız için nesne üretmeden kullanabliyoruz.
 
   static TextStyle getTitleTextStyle() {
-    return const TextStyle(
-        color: Colors.white, fontWeight: FontWeight.bold, fontSize: 48);
+    return  TextStyle(
+        color: Colors.white, fontWeight: FontWeight.bold, fontSize: _calculateFontSize(48));
   }
 
   static TextStyle getPokeItemNameTextStyle() {
-    return const TextStyle(
-        color: Colors.white, fontWeight: FontWeight.bold, fontSize: 30);
+    return  TextStyle(
+        color: Colors.white, fontWeight: FontWeight.bold, fontSize: _calculateFontSize(30));
   }
 
   static TextStyle getChipNameTextStyle() {
-    return const TextStyle(color: Colors.white, fontSize: 20);
+    return  TextStyle(color: Colors.white, fontSize: _calculateFontSize(20));
+  }
+
+static  _calculateFontSize(int size){
+    if(ScreenUtil().orientation==Orientation.portrait){
+      return size.sp;//Dikey modda telefon fontSizs'na göre ayarlanacak.
+    }else{
+      return (size*1.5).sp;/*Yatay modda geçildiğinde 1.5 kat, 
+      telefon ayarlarındaki fonsize büyüklüğüne göre yapılıyor*/
+    }
   }
 }
