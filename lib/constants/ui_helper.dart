@@ -15,6 +15,12 @@ class UIHelper {
     yatay modda ise genişliğin %20'si olacak şeklide ayarla.*/
   }
 
+  static int getPokeItemCount() {
+    return ScreenUtil().orientation == Orientation.portrait
+        ? 2
+        : 3; //Ekranda kaç tane kart gözükeceğini belirliyoruz
+  }
+
   static EdgeInsets getDeafultPadding() {
     if (ScreenUtil().orientation == Orientation.portrait) {
       return EdgeInsets.all(12

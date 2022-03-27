@@ -9,4 +9,13 @@ class Constants {
     return const TextStyle(
         color: Colors.white, fontWeight: FontWeight.bold, fontSize: 48);
   }
+
+  static TextStyle getPokeItemNameTextStyle() {
+    return const TextStyle(
+        color: Colors.white, fontWeight: FontWeight.bold, fontSize: 30);
+  }
+
+  static TextStyle getChipNameTextStyle() {
+    return const TextStyle(color: Colors.white, fontSize: 20);
+  }
 }
