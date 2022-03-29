@@ -11,7 +11,7 @@ class AppTitle extends StatefulWidget {
 }
 
 class _AppTitleState extends State<AppTitle> {
-  final String _pokeballImageUrl = 'images/pokeball.png';
+ 
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +31,7 @@ class _AppTitleState extends State<AppTitle> {
           Align(
             alignment: Alignment.topRight,
             child: Image.asset(
-              _pokeballImageUrl,
+              Constants.pokeballImageUrl,
               width: UIHelper.getAppIconWidthAndHeigth(),
               fit: BoxFit.fitWidth,
             ),

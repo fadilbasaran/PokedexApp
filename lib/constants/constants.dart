@@ -5,6 +5,7 @@ class Constants {
   Constants._(); //Kurucu metotunu gizli yapıldı ki kimse nesne türetmesin
   static const String title =
       'Pokedex'; //Biz bunları static tanımladığmız için nesne üretmeden kullanabliyoruz.
+  static const String pokeballImageUrl = 'images/pokeball.png';
 
   static TextStyle getTitleTextStyle() {
     return  TextStyle(
@@ -22,9 +23,9 @@ class Constants {
 
 static  _calculateFontSize(int size){
     if(ScreenUtil().orientation==Orientation.portrait){
-      return size.sp;//Dikey modda telefon fontSizs'na göre ayarlanacak.
+      return size.sp;//Dikey modda telefonun varsayılan fontSize'na göre ayarlanacak.
     }else{
-      return (size*1.5).sp;/*Yatay modda geçildiğinde 1.5 kat, 
+      return (size*1.5).sp;/*Yatay modda geçildiğinde 1.5 kat ve  
       telefon ayarlarındaki fonsize büyüklüğüne göre yapılıyor*/
     }
   }

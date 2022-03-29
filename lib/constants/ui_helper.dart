@@ -21,13 +21,21 @@ class UIHelper {
         : 3; //Ekranda kaç tane kart gözükeceğini belirliyoruz
   }
 
-  static EdgeInsets getDeafultPadding() {
+  static EdgeInsets getDefaultPadding() {
     if (ScreenUtil().orientation == Orientation.portrait) {
       return EdgeInsets.all(12
           .h); //Eğer dikey modda ise ekran yükskeliği üzerinden %12 olarak ayarla.
     } else {
       return EdgeInsets.all(8
           .w); //Eğer yatay modda ise ekran genişliği üzerinden %8 olarak ayarla.
+    }
+  }
+
+  static double calculatePokeImgAndBallSize() {
+    if (ScreenUtil().orientation == Orientation.portrait) {
+      return 0.2.sw;
+    } else {
+      return 0.3.sh;
     }
   }
 }
