@@ -6,10 +6,10 @@
   With this application,You can learn about Pokemon characters and views.
 </h3>
 
-Design of All Pages        
+### Screenshots     
 :-------------------------:
-![original-design](https://github.com/fadilbasaran/flutter_pokedex/blob/main/images/Screenshot%20for%20github/flutter_pokedex_1.jpg)
-![original-design](https://github.com/fadilbasaran/flutter_pokedex/blob/main/images/Screenshot%20for%20github/flutter_pokedex_2.jpg)
+<img src="images/Screenshot for github/flutter_pokedex_1.jpg" height="300em" />
+<img src="images/Screenshot for github/flutter_pokedex_2.jpg" height="300em" />
 
 ## :rocket: Technologies ##
 
