@@ -20,6 +20,12 @@ class Constants {
         fontWeight: FontWeight.bold,
         fontSize: _calculateFontSize(21));
   }
+  static TextStyle getPokeDetailNameTextStyle() {
+    return TextStyle(
+        color: Colors.white,
+        fontWeight: FontWeight.bold,
+        fontSize: _calculateFontSize(24));
+  }
 
   static TextStyle getChipNameTextStyle() {
     return TextStyle(color: Colors.white, fontSize: _calculateFontSize(20));
