@@ -15,7 +15,7 @@ class PokeListItem extends StatelessWidget {
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15.w)),
       elevation: 3,
       shadowColor: Colors.white,
-      color: Colors.red.shade200,
+      color: UIHelper.getColorFromType(pokemon.type![0]),
       child: Padding(
         padding: UIHelper.getDefaultPadding(),
         child: Column(

@@ -8,24 +8,29 @@ class Constants {
   static const String pokeballImageUrl = 'images/pokeball.png';
 
   static TextStyle getTitleTextStyle() {
-    return  TextStyle(
-        color: Colors.white, fontWeight: FontWeight.bold, fontSize: _calculateFontSize(48));
+    return TextStyle(
+        color: Colors.white,
+        fontWeight: FontWeight.bold,
+        fontSize: _calculateFontSize(48));
   }
 
   static TextStyle getPokeItemNameTextStyle() {
-    return  TextStyle(
-        color: Colors.white, fontWeight: FontWeight.bold, fontSize: _calculateFontSize(30));
+    return TextStyle(
+        color: Colors.white,
+        fontWeight: FontWeight.bold,
+        fontSize: _calculateFontSize(21));
   }
 
   static TextStyle getChipNameTextStyle() {
-    return  TextStyle(color: Colors.white, fontSize: _calculateFontSize(20));
+    return TextStyle(color: Colors.white, fontSize: _calculateFontSize(20));
   }
 
-static  _calculateFontSize(int size){
-    if(ScreenUtil().orientation==Orientation.portrait){
-      return size.sp;//Dikey modda telefonun varsayılan fontSize'na göre ayarlanacak.
-    }else{
-      return (size*1.5).sp;/*Yatay modda geçildiğinde 1.5 kat ve  
+  static _calculateFontSize(int size) {
+    if (ScreenUtil().orientation == Orientation.portrait) {
+      return size
+          .sp; //Dikey modda telefonun varsayılan fontSize'na göre ayarlanacak.
+    } else {
+      return (size.sp); /*Yatay modda geçildiğinde 1.5 kat ve  
       telefon ayarlarındaki fonsize büyüklüğüne göre yapılıyor*/
     }
   }
