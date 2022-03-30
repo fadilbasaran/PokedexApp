@@ -3,7 +3,7 @@
 
 <h3 align="center">
    :dart: About : 
-  With this application,You can learn about Pokemon characters and views.
+  With this application,You can learn about Pokemon characters and has a responsive design.
 </h3>
 
 ### Screenshots     
