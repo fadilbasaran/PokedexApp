@@ -7,9 +7,8 @@
 </h3>
 
 ### Screenshots     
-:-------------------------:
-<img src="images/Screenshot for github/flutter_pokedex_1.jpg" height="300em" />
-<img src="images/Screenshot for github/flutter_pokedex_2.jpg" height="300em" />
+<img src="images/Screenshot for github/flutter_pokedex_1.jpg" height="300em" /> <img src="images/Screenshot for github/flutter_pokedex_2.jpg" height="300em" />
+
 
 ## :rocket: Technologies ##
 
