@@ -8,8 +8,8 @@
 
 Design of All Pages        
 :-------------------------:
-![original-design](images/Screenshot for github/flutter_pokedex_1.jpg)
-![original-design](images/Screenshot for github/flutter_pokedex_1.jpg)
+![original-design](https://github.com/fadilbasaran/flutter_pokedex/blob/main/images/Screenshot%20for%20github/flutter_pokedex_1.jpg)
+![original-design](https://github.com/fadilbasaran/flutter_pokedex/blob/main/images/Screenshot%20for%20github/flutter_pokedex_2.jpg)
 
 ## :rocket: Technologies ##
 
