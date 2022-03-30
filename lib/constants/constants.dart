@@ -20,6 +20,7 @@ class Constants {
         fontWeight: FontWeight.bold,
         fontSize: _calculateFontSize(21));
   }
+
   static TextStyle getPokeDetailNameTextStyle() {
     return TextStyle(
         color: Colors.white,
@@ -31,12 +32,24 @@ class Constants {
     return TextStyle(color: Colors.white, fontSize: _calculateFontSize(20));
   }
 
+  static TextStyle getPokeInfoTextStyle() {
+    return TextStyle(color: Colors.black, fontSize: _calculateFontSize(16));
+  }
+
+  static TextStyle getPokeInfoLabelTextStyle() {
+    return TextStyle(
+        color: Colors.black,
+        fontWeight: FontWeight.bold,
+        fontSize: _calculateFontSize(20));
+  }
+
   static _calculateFontSize(int size) {
     if (ScreenUtil().orientation == Orientation.portrait) {
       return size
           .sp; //Dikey modda telefonun varsayılan fontSize'na göre ayarlanacak.
     } else {
-      return (size.sp); /*Yatay modda geçildiğinde 1.5 kat ve  
+      return (size
+          .sp); /*Yatay modda geçildiğinde 1.5 kat ve  
       telefon ayarlarındaki fonsize büyüklüğüne göre yapılıyor*/
     }
   }

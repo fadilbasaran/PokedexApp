@@ -1,12 +1,10 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class UIHelper {
   UIHelper._(); //Gizli ve kimse bir nesne oluşturmasın
 
-
-static final Map<String, Color> _typeColorMap = {
+  static final Map<String, Color> _typeColorMap = {
     'Grass': Colors.green,
     'Fire': Colors.redAccent,
     'Water': Colors.blue,
@@ -17,7 +15,8 @@ static final Map<String, Color> _typeColorMap = {
     'Psychic': Colors.indigo,
     'Fighting': Colors.orange,
     'Ghost': Colors.deepPurple,
-    'Normal': Colors.black26,
+    // ignore: prefer_const_constructors
+    'Normal': Color.fromARGB(255, 90, 87, 87),
     'Poison': Colors.deepPurpleAccent
   };
 
@@ -28,6 +27,7 @@ static final Map<String, Color> _typeColorMap = {
       return Colors.pink.shade300;
     }
   }
+
   static double getAppTitleWidgetHeigth() {
     return ScreenUtil().orientation == Orientation.portrait ? 0.15.sh : 0.18.sw;
     /*Eğer portait(dikey) modda ise ekran yüksekliğinin %15 yap, 
