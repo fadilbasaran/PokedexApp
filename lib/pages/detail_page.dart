@@ -46,10 +46,13 @@ class DetailPage extends StatelessWidget {
                         PokeNameType(pokemon: pokemon),
                         Hero(
                           tag: pokemon.id!,
-                          child: CachedNetworkImage(
-                            imageUrl: pokemon.img ?? ' ',
-                            height: 0.25.sw,
-                            fit: BoxFit.fitHeight,
+                          child: Padding(
+                            padding: UIHelper.getDefaultPadding(),
+                            child: CachedNetworkImage(
+                              imageUrl: pokemon.img ?? ' ',
+                              height: 0.4.sw,
+                              fit: BoxFit.fitHeight,
+                            ),
                           ),
                         ),
                       ],

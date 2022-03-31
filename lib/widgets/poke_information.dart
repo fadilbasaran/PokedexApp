@@ -18,20 +18,24 @@ class PokeInformation extends StatelessWidget {
           color: Colors.white),
       child: Padding(
         padding: UIHelper.getDefaultPadding(),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            _buildInormationRow('Name', pokemon.name),
-            _buildInormationRow('Height', pokemon.height),
-            _buildInormationRow('Weight', pokemon.name),
-            _buildInormationRow('Spawn Time', pokemon.spawnTime),
-            _buildInormationRow('Weakness', pokemon.weaknesses),
-            _buildInormationRow('Pre Evilation', pokemon.prevEvolution),
-            _buildInormationRow('Next Evilaton', pokemon.nextEvolution),
-          ],
-        ),
+        child: _buildInfoPoke(),
       ),
     );
+  }
+
+  Column _buildInfoPoke() {
+    return Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          _buildInormationRow('Name', pokemon.name),
+          _buildInormationRow('Height', pokemon.height),
+          _buildInormationRow('Weight', pokemon.name),
+          _buildInormationRow('Spawn Time', pokemon.spawnTime),
+          _buildInormationRow('Weakness', pokemon.weaknesses),
+          _buildInormationRow('Pre Evilation', pokemon.prevEvolution),
+          _buildInormationRow('Next Evilaton', pokemon.nextEvolution),
+        ],
+      );
   }
 
   _buildInormationRow(String label, dynamic value) {
