@@ -50,7 +50,7 @@ class DetailPage extends StatelessWidget {
                             padding: UIHelper.getDefaultPadding(),
                             child: CachedNetworkImage(
                               imageUrl: pokemon.img ?? ' ',
-                              height: 0.4.sw,
+                              height: 0.50.sw,
                               fit: BoxFit.fitHeight,
                             ),
                           ),
