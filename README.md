@@ -21,7 +21,7 @@ The following tools were used in this project:
 
 ```bash
 # Clone this project
-$ git clone https://github.com/fadilbasaran/flutter_pokedex
+$ git clone https://github.com/fadilbasaran/PokedexApp
 # Access
 $ cd flutter_pokedex
 # Pull dependencies
