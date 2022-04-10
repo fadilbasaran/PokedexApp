@@ -1,5 +1,5 @@
 
-<h1 align="center">Pokedex Mobile Application</h1>
+<h1 align="center">Pokedex Mobile Applicati</h1>
 
 <h3 align="center">
    :dart: About : 
